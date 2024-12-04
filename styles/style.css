@@ -1,0 +1,782 @@
+/* Resetea márgenes, relleno y aplica box-sizing universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Define las variables de colores y configuraciones principales */
+:root {
+    --main-blue: #4bcaff;
+    --main-blue_transparent: #4bc9ffb6;
+    --nav-color: #272d30a8;
+    --color1: #515f67;
+    --color2: #353F46;
+}
+
+/* Configura el estilo global de los botones */
+button {
+    cursor: pointer;
+}
+
+
+/* Configuración general del encabezado principal */
+#main-header {
+    background-color: var(--nav-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 50px 0;
+    position: fixed;
+    width: 100dvw;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+/* Estilo del logo del encabezado */
+#logo {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Color especial para el span del logo */
+#logo span {
+    color: var(--main-blue);
+}
+
+/* Configuración del menú de navegación */
+#mainNav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Estilo de las opciones del menú de navegación */
+.nav-item {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+
+/* Efecto hover en las opciones del menú */
+.nav-item:hover {
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+}
+
+
+/* Configuración del primer bloque de la página */
+#section_1 {
+    background: url('../assets/images/Fondo.png') center center no-repeat;
+    background-size: cover;
+    height: 96dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Configuración de contenido del primer bloque */
+.section-content {
+    display: grid;
+    gap: 5px;
+    justify-items: center;
+}
+
+/* Estilo de la cita dentro del primer bloque */
+#section_1 .p1 {
+    background-color: var(--nav-color);
+    font-size: 40px;
+    width: fit-content;
+    padding: 2px 5px;
+    color: white;
+}
+
+
+/* Configuración del segundo bloque */
+#section_2 {
+    background-color: var(--main-blue);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: end;
+    padding: 100px 0 70px 0;
+    height: fit-content;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Configuración de los servicios del segundo bloque */
+.service {
+    display: grid;
+    max-width: 200px;
+    min-width: none;
+    font-size: 11px;
+    color: white;
+}
+
+
+/* Configuración del tercer bloque */
+#section_3 {
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    width: 70%;
+    padding: 0 0 70px 0;
+}
+
+/* Configuración del encabezado del portafolio */
+.portfolio-header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+    gap: 100%;
+    padding: 70px 0;
+}
+
+/* Título del portafolio */
+.portfolio-title {
+    display: grid;
+    font-weight: lighter;
+}
+
+/* Estilo del divisor en el portafolio */
+#section_3 .divider {
+    border: 1px solid black;
+    width: 55px;
+}
+
+/* Navegación del portafolio */
+.portfolio-nav {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* Estilo de los enlaces del portafolio */
+.links2 {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/* Efecto hover en los enlaces del portafolio */
+.links2:hover {
+    color: var(--main-blue);
+    border: 1px solid var(--main-blue);
+}
+
+/* Configuración de las imágenes del portafolio */
+.portfolio-images {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+}
+
+
+/* Configuración del cuarto bloque */
+#section_4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--color1);
+    padding: 50px 0;
+}
+
+/* Configuración del texto en el cuarto bloque */
+.features-text {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    height: fit-content;
+    justify-content: center;
+    align-self: center;
+    gap: 10px;
+    color: white;
+    width: fit-content;
+    justify-self: center;
+}
+
+/* Título de las características del cuarto bloque */
+.features-title {
+    display: grid;
+    font-weight: lighter;
+}
+
+/* Divisor en el bloque de características */
+.divider {
+    border: 1px solid white;
+    width: 55px;
+}
+
+/* Descripción de las características */
+.features-description {
+    width: 370px;
+    font-size: 11px;
+    height: fit-content;
+}
+
+/* Descripción adicional con un ancho más reducido */
+.features-description:nth-child(3) {
+    width: 340px;
+}
+
+/* Estilo del botón de características */
+.features-button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 10px;
+    background-color: transparent;
+    border: 2px solid var(--color2);
+    padding: 7px 20px;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+/* Efecto hover en el botón de características */
+.features-button:hover {
+    border: 2px solid var(--main-blue);
+    color: var(--main-blue);
+}
+
+
+/* Configuración del quinto bloque */
+#section_5 {
+    background-color: var(--main-blue);
+    color: white;
+    display: grid;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+/* Encabezado de la sección de Twitter */
+.twitter-header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 100%;
+}
+
+/* Título de la sección de Twitter */
+.twitter-header .twitter-title {
+    display: grid;
+    font-weight: lighter;
+}
+
+/* Divisor en el encabezado de Twitter */
+.twitter-header .divider {
+    border: 1px solid white;
+    width: 55px;
+}
+
+/* Contenido de la sección de Twitter */
+.twitter-content {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 100%;
+}
+
+/* Descripción de la sección de Twitter */
+.twitter-description {
+    width: 800px;
+    font-size: 20px;
+}
+
+/* Estilo adicional para texto enfático */
+#chees {
+    font-weight: bold;
+}
+
+
+/* Configuración del sexto bloque */
+#section_6 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../assets/images/bg_whoIs.png') center center no-repeat;
+    background-size: cover;
+    color: white;
+    align-items: end;
+    padding: 100px 0 200px 0;
+    gap: 20px;
+}
+
+/* Encabezado del bloque "Quiénes somos" */
+.whois-header {
+    display: grid;
+    justify-items: end;
+    gap: 20px;
+}
+
+/* Contenido del bloque "Quiénes somos" */
+.whois-content {
+    display: grid;
+    gap: 20px;
+}
+
+/* Estilo de los iconos sociales */
+.whois-content .social-icons {
+    display: grid;
+    gap: 20px;
+    width: fit-content;
+    grid-template-columns: repeat(4, auto);
+}
+
+/* Estilo individual de cada icono social */
+.whois-content .social-icon {
+    width: 50px;
+}
+
+/* Divisor en el encabezado del bloque "Quiénes somos" */
+.whois-header .divider {
+    border: 1px solid white;
+    width: 55px;
+}
+
+/* Descripción del bloque "Quiénes somos" */
+.whois-description {
+    width: 400px;
+    font-size: 10px;
+    line-height: 20px;
+}
+
+
+/* Configuración del séptimo bloque */
+#section_7 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    color: var(--color1);
+    padding: 50px 0;
+}
+
+/* Encabezado del bloque de testimonios */
+.testimonials-header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 620px;
+    justify-content: center;
+    width: fit-content;
+    justify-self: center;
+}
+
+/* Divisor en los testimonios */
+.testimonials-header .divider {
+    border: 1px solid var(--color1);
+    width: 55px;
+    height: fit-content;
+}
+
+/* Título de la sección de testimonios */
+.testimonials-header h2 {
+    height: fit-content;
+}
+
+/* Contenido de los testimonios */
+.testimonials-content {
+    display: grid;
+    justify-self: center;
+    width: fit-content;
+    gap: 15px;
+    padding: 0 0 20px 0;
+}
+
+/* Estilo de las citas de los testimonios */
+.testimonials-quote {
+    width: 820px;
+    font-size: 21px;
+}
+
+/* Estilo del nombre del autor de los testimonios */
+.testimonials-author {
+    font-size: 12px;
+    color: var(--main-blue);
+}
+
+
+/* Configuración del octavo bloque */
+#section_8 {
+    background: url('../assets/images/bg_contact.png') center center no-repeat;
+    background-size: cover;
+    display: grid;
+}
+
+/* Encabezado de la sección de contacto */
+.contact-header {
+    display: grid;
+    justify-items: flex-start;
+    padding: 40px 0;
+    gap: 20px;
+    width: fit-content;
+    justify-self: center;
+}
+
+/* Estilo del título en la sección de contacto */
+.contact-header h2 {
+    color: white;
+}
+
+/* Divisor del encabezado de contacto */
+.contact-header .divider {
+    width: 55px;
+    border: 1px solid white;
+}
+
+/* Configuración del formulario de contacto */
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+}
+
+/* Estilo de la columna izquierda del formulario */
+.form-left {
+    display: grid;
+    grid-template-columns: auto;
+    width: fit-content;
+    justify-items: flex-start;
+    justify-self: start;
+    align-content: center;
+    gap: 20px;
+}
+
+/* Grupo de entradas de formulario */
+.form-group {
+    display: grid;
+    gap: 3px;
+}
+
+/* Estilo de los campos de entrada en el formulario */
+.form-input {
+    width: 300px;
+    height: 40px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0 0 0 5px;
+}
+
+/* Etiquetas de los campos de formulario */
+.form-label {
+    color: white;
+    font-size: 12px;
+}
+
+/* Estilo de la columna derecha del formulario */
+.form-right {
+    display: grid;
+    gap: 20px;
+}
+
+/* Texto explicativo en la sección de contacto */
+.contact-text {
+    width: 400px;
+    font-size: 13px;
+    color: white;
+}
+
+/* Grupo de mensajes de texto */
+.message-group {
+    display: grid;
+    gap: 20px;
+    width: fit-content;
+    justify-self: center;
+}
+
+/* Estilo del área de texto del formulario */
+.form-textarea {
+    resize: none;
+    min-width: 800px;
+    min-height: 200px;
+    background: transparent;
+    outline: none;
+    border: 2px solid white;
+    padding: 5px;
+    color: white;
+}
+
+/* Botón de envío en la sección de contacto */
+.contact-button {
+    display: grid;
+    justify-self: flex-start;
+    padding: 12px 60px;
+    color: white;
+    background-color: var(--main-blue);
+    border: none;
+    outline: none;
+}
+
+/* Efecto activo del botón de contacto */
+.contact-button:active {
+    background-color: var(--main-blue_transparent);
+}
+
+
+/* Configuración del pie de página */
+#footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 70%;
+    padding: 50px 70px;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 12px;
+}
+
+/* Enlaces dentro del pie de página */
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    width: fit-content;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Estilo individual de cada enlace */
+.footer-link {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+
+/* Efecto hover en los enlaces del pie de página */
+.footer-link:hover {
+    color: var(--main-blue);
+}
+
+/* Información adicional en el pie de página */
+.footer-info {
+    display: grid;
+    justify-self: flex-end;
+    width: fit-content;
+}
+
+/* ------------ Media Query ------------ */
+
+/* Estilos adaptativos para pantallas pequeñas */
+@media screen and (max-width: 1434px) {
+    /* Configuración del portafolio para pantallas medianas */
+    #section_3 .portfolio-images {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 1070px) {
+    /* Ajustes en el portafolio */
+    #section_3 {
+        justify-content: center;
+    }
+    .portfolio-header {
+        grid-template-columns: auto;
+        gap: 0;
+        align-self: center;
+    }
+    .portfolio-images {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    /* Ajustes en la sección de Twitter */
+    #section_5 {
+        text-align: center;
+        justify-items: center;
+    }
+}
+@media screen and (max-width: 935px) {
+    /* Ajustes en la sección de servicios */
+    #section_2 {
+        grid-template-columns: repeat(2, auto);
+        padding: 60px 0 50px 0;
+    }
+    /* Ajustes en la sección de características */
+    #section_4 {
+        grid-template-columns: auto;
+        justify-content: center;
+        gap: 20px;
+    }
+    /* Ajustes en el pie de página */
+    #footer {
+        padding: 50px 10px;
+        gap: 300px;
+    }
+}
+
+@media screen and (max-width: 835px) {
+    /* Reducción del tamaño del encabezado */
+    #main-header {
+        padding: 30px 0;
+    }
+    /* Ajustes en la cita principal */
+    .p1 {
+        font-size: 30px;
+        text-align: center;
+    }
+    /* Centrado del texto de características */
+    .features-text {
+        justify-items: center;
+    }
+    .features-description {
+        text-align: center;
+    }
+    /* Reducción del tamaño del texto en la sección de Twitter */
+    .twitter-description {
+        font-size: 15px;
+        width: 600px;
+    }
+    /* Ajustes en la sección de "Quiénes somos" */
+    #section_6 {
+        grid-template-columns: auto;
+        justify-content: center;
+        text-align: center;
+    }
+    /* Ajuste de alineación en la descripción de "Quiénes somos" */
+    .whois-header .divider {
+        justify-self: flex-start;
+    }
+    /* Centrado de los íconos sociales */
+    .social-icons {
+        justify-self: center;
+    }
+    /* Ajustes en la sección de testimonios */
+    #section_7 {
+        text-align: center;
+    }
+    .testimonials-header {
+        gap: 300px;
+    }
+    .testimonials-quote {
+        font-size: 15px;
+        width: 450px;
+    }
+    /* Ajustes en el formulario de contacto */
+    .contact-form {
+        grid-template-columns: auto;
+        text-align: center;
+        gap: 20px;
+        justify-self: center;
+    }
+    .form-left {
+        gap: 0;
+        justify-self: center;
+    }
+    .form-textarea {
+        min-width: 600px;
+    }
+    /* Ajustes en el pie de página */
+    #footer {
+        grid-template-columns: auto;
+        gap: 10px;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 625px) {
+    /* Reducción del tamaño de la cita principal */
+    .p1 {
+        font-size: 25px;
+    }
+    /* Ajustes en la descripción de Twitter */
+    .twitter-description {
+        font-size: 15px;
+        width: 400px;
+    }
+    /* Reducción del área de texto en el formulario */
+    .form-textarea {
+        min-width: 400px;
+        min-height: 150px;
+    }
+    /* Ajustes en el pie de página */
+    #footer {
+        grid-template-columns: auto;
+        gap: 15px;
+        justify-items: center;
+        justify-content: center;
+    }
+    .footer-info {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    /* Reducción del tamaño del encabezado */
+    #main-header {
+        padding: 10px 0;
+        align-items: center;
+    }
+    /* Ajustes en la navegación principal */
+    #mainNav {
+        grid-template-columns: repeat(2, auto);
+        gap: 10px;
+    }
+    /* Ajustes en las imágenes de características */
+    #section_4 .features-img {
+        width: 400px;
+    }
+    /* Reducción del tamaño de las imágenes del portafolio */
+    #section_3 .portfolio-img {
+        width: 200px;
+    }
+    /* Ajustes en la sección de testimonios */
+    #section_7 .testimonials-header {
+        gap: 150px;
+    }
+    .testimonials-quote {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    /* Ajustes en la navegación del portafolio */
+    #section_3 .portfolio-nav {
+        grid-template-columns: repeat(3, auto);
+        gap: 15px;
+    }
+    /* Reducción del tamaño de las imágenes del portafolio */
+    #section_3 .portfolio-img {
+        width: 130px;
+    }
+    /* Reducción del tamaño de la descripción de "Quiénes somos" */
+    #section_6 .whois-description {
+        width: 350px;
+    }
+    /* Reducción del tamaño de la descripción de características */
+    #section_4 .features-description {
+        width: 350px;
+    }
+    /* Ajustes en las imágenes de características */
+    #section_4 .features-img {
+        width: 350px;
+    }
+    /* Ajustes en la descripción de Twitter */
+    #section_5 .twitter-description {
+        width: 350px;
+    }
+    /* Ajustes en el botón de contacto */
+    #section_8 .contact-button {
+        justify-self: center;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    /* Ajustes en la sección de servicios */
+    #section_2 {
+        grid-template-columns: auto;
+    }
+    /* Ajustes en el texto de contacto */
+    #section_8 .contact-text {
+        width: 350px;
+    }
+    /* Reducción del área de texto en el formulario */
+    #section_8 .form-textarea {
+        min-width: 300px;
+        min-height: 100px;
+    }
+}
+
+
